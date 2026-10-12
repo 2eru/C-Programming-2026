@@ -30,5 +30,29 @@ int main(void) {
 
     printf("bmi = %.2f\n", bmi);
 
+
+    // 금액을 화폐 단위로 분해
+    int amount;
+    scanf("%d", &amount);
+
+    int hundred_thousand = amount / 100000;
+    amount %= 100000;
+    int ten_thousand = amount / 10000;
+    amount %= 10000;
+    int thousand = amount / 1000;
+    amount %= 1000;
+    int hundred = amount / 100;
+    amount %= 100;
+    int ten = amount / 10;
+    amount %= 10;
+    int one = amount;
+
+    printf("10만원: %d장\n", hundred_thousand);
+    printf("1만원: %d장\n", ten_thousand);
+    printf("1천원: %d장\n", thousand);
+    printf("1백원: %d개\n", hundred);
+    printf("1십원: %d개\n", ten);
+    printf("1원: %d개\n", one);
+
     return 0;
 }
